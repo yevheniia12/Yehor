@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: white;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  #background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+  }
+  
+  .navigacija {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .navigacija ul {
+    list-style: none;
+  }
+  
+  .navigacija li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  .navigacija a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .navigacija a:hover {
+    color: #00FF00;
+    transform: scale(1.1);
+  }
+
+  #glava {
+    background: rgba(205, 97, 255, 0.8);
+    padding: 40px;
+    text-align: center;
+    font-size: 2em;
+    border-bottom: 4px solid #222;
+  }
+  
+  .vsebina {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 15px;
+  }
+  
+  .slika {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border: 5px solid #ff4500;
+    border-radius: 15px;
+    transition: transform 0.5s ease;
+  }
+  
+  .slika:hover {
+    transform: scale(1.2);
+    cursor: zoom-in;
+  }
+  
+  ul li:first-child {
+    background-color: #ffcc00;
+  }
+  ul li:last-child {
+    background-color: #66ccff;
+  }
+  
+  li {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+  }
+  
+  .uvod {
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+
+  #interakcija {
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  #interakcija button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  #interakcija button:hover {
+    background-color: #0097a7;
+  }
+  
+  #interakcija input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+  }
+
+  #interakcija input:focus {
+    border-color: #ff9800;
+    outline: none;
+  }
+  
+  #interakcija button:active {
+    background-color: #00796b;
+  }

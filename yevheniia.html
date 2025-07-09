@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hip Hop</title>
+  <link rel="stylesheet" href="naloga.css">
+</head>
+<body>
+  <video autoplay muted loop id="background-video">
+    <source src="hiphop.mp4" type="video/mp4">
+    Tvoj brskalnik ne podpira videoposnetka.
+  </video>
+  <nav class="navigacija">
+    <ul>
+      <li><a href="#glava">Domov</a></li>
+      <li><a href="#vsebina">O hip hopu</a></li>
+      <li><a href="#interakcija">Kontakt</a></li>
+    </ul>
+  </nav>
+  <header id="glava">
+    <h1>Dobrodošli v svet Hip Hopa</h1>
+  </header>
+  <section class="vsebina" id="vsebina">
+    <p class="uvod">Hip hop je glasbeno in kulturno gibanje, ki se je začelo v 70-ih letih v Bronxu, New York.</p>
+    <img src="hiphop.png" alt="Hip Hop slika" class="slika">
+
+    <h2>Značilnosti hip hopa:</h2>
+    <ul>
+      <li>MC-ji (reperji)</li>
+      <li>DJ-ji</li>
+      <li>Grafiti</li>
+      <li>Breakdance</li>
+    </ul>
+  </section>
+
+  <section id="interakcija">
+    <h2>Kontaktiraj nas</h2>
+    <button onclick="pokaziSporocilo()">Klikni me</button>
+    <button onclick="spremeniOzadje()">Spremeni ozadje</button>
+
+    <form onsubmit="return preveriObrazec()">
+      <input type="text" id="ime" placeholder="Vnesi ime" required>
+      <input type="email" id="email" placeholder="Vnesi e-pošto" required>
+      <button type="submit">Pošlji obrazec</button>
+    </form>
+  </section>
+
+  <script>
+    function pokaziSporocilo() {
+      alert("Pozdravljen! To je sporočilo.");
+    }
+    function spremeniOzadje() {
+      document.body.style.backgroundColor = "#000000a0";
+    }
+
+    function preveriObrazec() {
+      const ime = document.getElementById("ime").value;
+      const email = document.getElementById("email").value;
+
+      if (ime === "" || email === "") {
+        alert("Prosim, izpolni vsa polja!");
+        return false;
+      }
+      alert("Hvala za oddano sporočilo!");
+      return true;
+    }
+  </script>
+</body>
+</html>
